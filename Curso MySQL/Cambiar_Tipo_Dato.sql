@@ -1,0 +1,9 @@
+-- CAMBIAR DATA TYPE (TIPO DE DATOS) DE UNA COLUMNA
+
+-- ALTER TABLE <nombre_tabla>
+-- MODIFY <nombre_columna> <tipo_de_dato_nuevo>;
+
+USE GRUPOS;
+DESCRIBE GRUPO_2;
+
+ALTER TABLE GRUPO_2 MODIFY NOMBRE char(12);    

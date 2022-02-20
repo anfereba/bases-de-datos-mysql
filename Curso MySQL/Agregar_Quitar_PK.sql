@@ -1,0 +1,47 @@
+-- AGREGAR Y QUITAR PK A UNA TABLA
+
+-- AGREGAR PK
+
+-- ALTER TABLE <nombre_tabla>
+-- ADD PRIMARY KEY (Nombre columna)
+
+-- ELIMINAR PK
+
+-- ALTER TABLE <nombre_tabla>
+-- DROP PRIMARY KEY
+
+-- CREATE TABLE <nombre_tabla> (
+-- <nombre_columna> <tipo_de_data_1> NOT NULL,
+-- <nombre_columna2> <tipo_de_data_2> NOT NULL,
+--
+-- PRIMARY KEY (<nombre_columna1>)
+-- );
+
+CREATE DATABASE grupos;
+USE GRUPOS;
+
+CREATE TABLE ZONAS (
+	ID INT NOT NULL ,
+    DIR_COD INT NOT NULL,
+    DIR VARCHAR(20),
+    NOMBRE VARCHAR(20)
+);
+
+DESC ZONAS;
+
+ALTER TABLE ZONAS
+ADD PRIMARY KEY (ID);
+
+CREATE TABLE GRUPO_1 (
+	ID INT NOT NULL ,
+    NOMBRE INT NOT NULL,
+    DIR_COD INT NOT NULL,
+    primary key (ID)
+);
+
+DESC GRUPO_1;
+
+ALTER TABLE ZONAS
+DROP PRIMARY KEY;
+
+DESC ZONAS;
